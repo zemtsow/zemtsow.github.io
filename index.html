@@ -1,79 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikolay Zemtsow - CV</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zemtsow Nikolay - CV</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
   <style>
     body {
+      font-family: Arial, sans-serif;
       animation: showAnimation 1.5s forwards;
       opacity: 0;
+      background: #f5f5f5;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
     }
+
     @keyframes showAnimation {
       0% {
         opacity: 0;
-        transform: scale(2.5);
+        transform: scale(1.05);
       }
-      50% {
-        opacity: 0.5;
-      }
+
       100% {
         opacity: 1;
         transform: scale(1);
       }
     }
-  </style>
-<body class="stackedit">
-  <div class="stackedit__html">
-    <h1 id="резюме"><code>Summary</code></h1>
-    <p>My name is <code>Zemtsow Nikolay, I am 20 years old. And I <strong>Front-end Developer</strong></code>.</p>
-    <blockquote>
-      <p>I have been doing front-end development for 4 years. I have 1.5 experience in JavaScript and static and dynamic web development
-        applications on React. I also wrote the backend and parsing scripts in Python.
-        I have experience in writing online stores as well as Admin panels. Also had experience in SSR <strong>(Server Side
-          Rendering)</strong>. I had experience writing applications in Vue or rather <strong>Debugging</strong> big
-          amount of code. I worked on mobile development for about 6 months <strong>React Native</strong> I wrote a pet project and 1 application for IOS & Android.
-      </p>
-    </blockquote>
-    <p><strong>Hard Skills:</strong><br>
 
+    .cv-container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .cv-meta {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    img.avatar {
+      width: 200px;
+      max-width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h1,
+    h2 {
+      color: #222;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 600px) {
+      .cv-meta {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cv-meta img.avatar {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .cv-container {
+        padding: 20px;
+      }
+
+      ul {
+        padding-left: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-container">
+    <div class="cv-meta">
+      <img class="avatar" src="./avatar.jpg" alt="Avatar" />
+      <div>
+        <h1>Zemtsow Nikolay</h1>
+        <p><strong>Fullstack Developer</strong></p>
+        <p>Email: <a href="mailto:nickwebtm@gmail.com">nickwebtm@gmail.com</a></p>
+        <p>Location: Ashgabat, 744035</p>
+        <p>Birth Date: 2004.04.19 | Nationality: Russian</p>
+      </div>
+    </div>
+
+    <h2>Languages</h2>
     <ul>
-      <li><strong>Front-end:</strong> HTML / HTMX / JS / React / Next js / Tailwind / CSS / SCSS</li>
-      <li><strong>Types:</strong> Typescript / d.types/ Zod</li>
-      <li><strong>Mobile Development:</strong> React Native</li>
-      <li><strong>Development Type Front-end:</strong> SSR <strong>(Server Side Rendering)</strong> / SSG
-        <strong>(Static Site Generation)</strong></li>
-      <li><strong>State Managers:</strong> Mobx / Recoil / Zustand / Redux</li>
-      <li><strong>Dev Tools:</strong> S3 Storage / VPS / CMS</li>
+      <li>Russian — Native</li>
+      <li>English — B2</li>
     </ul>
 
-    <p><strong>Soft Skills:</strong><br>
+    <h2>Summary</h2>
+    <p>
+      Accomplished Full Stack Developer with expertise in React and Django, delivering SPA and MPA applications at Takyk
+      Ulgam H.J. Strong in cross-functional collaboration, user experience optimization, and robust backend solutions.
+    </p>
 
-    <blockquote>
-      <p>I have experience in organizational communication skills, I also acted as a technical leader with the team
-        on one of the freelance projects. Now I’m working on self-managmento, learning how to properly allocate time for work and life, and trying to adequately respond to both good and bad moments in life.
-        When responding to a project, I try to listen to the client and understand what he needs, I’m used to finishing what I started, even if there is very little time allotted for it.
-      </p>
-    </blockquote>
-  <hr>
-    <blockquote>
-      <p>I gained my knowledge from official documentation JavaScript - MDN, FreeCodeCamp, HowProgrammingWorks by
-        Metarhia<br>
-        <strong>For the last year I have been a member of a closed developer community.</strong>
-      </p>
-    </blockquote>
-    <blockquote>
-      <p><strong>Of interest: React Native Mobile development, as well as further study of front-end and backend
-        directions</strong></p>
-    </blockquote>
-    <p>Contacts:</p>
+    <h2>Skills</h2>
     <ul>
-      <li>gmail: <a href="mailto:nickwebtm@gmail.com"><code>nickwebtm@gmail.com</code></a></li>
-      <li>Telegram: <a href="https://t.me/zemcow_nick" target="_blank"><code>@zemcow_nick</code></a></li>
-      <li>github <a href="https://github.com/zemtsow/" target="_blank">@zemtsow</a></li>
+      <li>Frontend: React, React Native, Next.js, JavaScript, TypeScript, GSAP</li>
+      <li>Backend: Django, FastAPI, Node.js (basic), PostgreSQL, REST</li>
+      <li>Markup: HTML5, CSS, Material UI</li>
+      <li>Tools: Git (GitHub, GitLab), Postman, Figma</li>
+    </ul>
+
+    <h2>Experience</h2>
+
+    <h3>Full Stack Developer — Takyk Ulgam H.J (Oct 2023 – Apr 2025)</h3>
+    <ul>
+      <li>Developed SPA/MPA and backend using Django + FastAPI</li>
+      <li>Architected applications and created backend structures</li>
+      <li>Built government portals, e-commerce systems, and internal tools</li>
+      <li>Tools: React, TypeScript, GSAP, Node.js</li>
+    </ul>
+
+    <h3>Front-End Developer — Millisan H.K (Jun 2023 – Oct 2023)</h3>
+    <ul>
+      <li>Worked on personal websites, online payment systems</li>
+      <li>Focused on responsive, pixel-perfect design and animation</li>
+      <li>Tools: React, TypeScript, GSAP</li>
+    </ul>
+
+    <h3>Front-End Developer — Turkmenportal (Feb 2023 – Jun 2023)</h3>
+    <ul>
+      <li>Developed and supported company portals and admin panels</li>
+      <li>Performed layout and backend integration</li>
+      <li>Tools: React, TypeScript, Node.js</li>
+    </ul>
+
+    <h2>Education</h2>
+    <p>School 36, Ashgabat</p>
+
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:nickwebtm@gmail.com">nickwebtm@gmail.com</a></li>
+      <li>Telegram: <a href="https://t.me/zemcow_nick">@zemcow_nick</a></li>
+      <li>GitHub: <a href="https://github.com/zemtsow">@zemtsow</a></li>
     </ul>
   </div>
 </body>
