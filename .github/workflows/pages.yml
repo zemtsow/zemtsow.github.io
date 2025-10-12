@@ -21,10 +21,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug: show tree
+        run: |
+          pwd
+          ls -la
+          echo "---- dist ----"
+          ls -la dist || true
+
+      - name: Guard: fail if no dist/index.html
+        run: |
+          test -f dist/index.html || (echo "dist/index.html NOT FOUND" && exit 1)
+
+      # Если у тебя SPA и нужны прямые ссылки, раскомментируй:
+      # - name: SPA fallback
+      #   run: cp dist/index.html dist/404.html
+
       - name: Upload Pages artifact (dist)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist  # ← именно ПАПКА, где лежит index.html
 
   deploy:
     needs: upload
