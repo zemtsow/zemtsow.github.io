@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zemsow Nikolay - site</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFyixcsungSrkNfwzNuiA0YU9cYFHBrck",
+      authDomain: "zemtsow-github.firebaseapp.com",
+      projectId: "zemtsow-github",
+      storageBucket: "zemtsow-github.firebasestorage.app",
+      messagingSenderId: "207311248811",
+      appId: "1:207311248811:web:42231b20cb82fd12b486ee",
+      measurementId: "G-D01L2CD5TW"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+
+</html>

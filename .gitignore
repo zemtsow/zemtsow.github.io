@@ -6,9 +6,8 @@ tailwind.config.js
 postcss.config.js
 package.json
 package-lock.json
-index.html
 src
 public
 README.md
-index.html
+./index.html
 .eslintrc.cjs
