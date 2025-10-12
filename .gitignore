@@ -1,0 +1,14 @@
+node_modules
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+tailwind.config.js
+postcss.config.js
+package.json
+package-lock.json
+index.html
+src
+public
+README.md
+index.html
+.eslintrc.cjs
