@@ -1,4 +1,4 @@
-name: Deploy dist/ to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -15,39 +15,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  upload:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug: show tree
-        run: |
-          pwd
-          ls -la
-          echo "---- dist ----"
-          ls -la dist || true
+      - name: Add .nojekyll
+        run: touch dist/.nojekyll
 
-      - name: Guard: fail if no dist/index.html
-        run: |
-          test -f dist/index.html || (echo "dist/index.html NOT FOUND" && exit 1)
-
-      # Если у тебя SPA и нужны прямые ссылки, раскомментируй:
-      # - name: SPA fallback
-      #   run: cp dist/index.html dist/404.html
-
-      - name: Upload Pages artifact (dist)
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # ← именно ПАПКА, где лежит index.html
+          path: dist
 
-  deploy:
-    needs: upload
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
