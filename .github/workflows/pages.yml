@@ -1,8 +1,9 @@
-name: Build & Deploy to GitHub Pages
+name: Deploy dist/ to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # или ваша основная ветка
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,32 +15,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Если нужен Node.js
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Build
-        run: npm run build   # команда должна положить сайт в ./dist
-
-      - name: Upload Pages artifact
+      - name: Upload Pages artifact (dist)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
-    needs: build
+    needs: upload
     runs-on: ubuntu-latest
     environment:
       name: github-pages
