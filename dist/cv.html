@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,7 +75,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
     }
 
@@ -304,7 +306,8 @@
     /* =========================
        JOBS / PROJECTS
     ========================== */
-    .job-entry, .project-entry {
+    .job-entry,
+    .project-entry {
       margin-bottom: 18px;
     }
 
@@ -490,11 +493,27 @@
        RESPONSIVE
     ========================== */
     @media (max-width: 820px) {
-      .resume-card { padding: 26px 18px; }
-      .two-col-grid { grid-template-columns: 1fr; }
-      .right-sidebar { border-left: 0; padding-left: 0; margin-top: 4px; }
-      .rate-block { text-align: left; }
-      .header-section { padding-bottom: 18px; }
+      .resume-card {
+        padding: 26px 18px;
+      }
+
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .right-sidebar {
+        border-left: 0;
+        padding-left: 0;
+        margin-top: 4px;
+      }
+
+      .rate-block {
+        text-align: left;
+      }
+
+      .header-section {
+        padding-bottom: 18px;
+      }
     }
 
     /* =========================
@@ -578,11 +597,13 @@
         <div class="section-title">Профиль</div>
         <div class="about-text">
           <p>
-            Frontend-разработчик с 5+ годами коммерческого опыта. Разрабатываю высоконагруженные SPA/MPA и SSR-приложения (Next.js),
+            Frontend-разработчик с 5+ годами коммерческого опыта. Разрабатываю высоконагруженные SPA/MPA и
+            SSR-приложения (Next.js),
             работаю с React и TypeScript экосистемой, архитектурой FSD и микрофронтендами.
           </p>
           <p>
-            Есть практический опыт real-time решений (WebSocket, WebRTC): live-дашборды, коммуникационные интерфейсы и продукты с низкой задержкой.
+            Есть практический опыт real-time решений (WebSocket, WebRTC): live-дашборды, коммуникационные интерфейсы и
+            продукты с низкой задержкой.
             Фокус на производительности: код-сплиттинг, оптимизация сборки и бандла (15MB → 6MB, −35%), улучшение TTI.
           </p>
           <p>
@@ -594,15 +615,19 @@
 
         <div class="job-entry">
           <div class="job-header">
-            <span class="job-company">Dalyoko LLC — Frontend Developer</span>
-            <span class="job-period">Май 2025 – Авг 2025</span>
+            <span class="job-company">WORKIT — Fullstack Developer</span>
+            <span class="job-period">Авг 2025 – Мар 2026</span>
           </div>
-          <div class="job-role">React, TypeScript, Tailwind, WebRTC, WebSocket</div>
+          <div class="job-role">Python (FastAPI, Django), React, Vue, Next.js, WebSocket</div>
           <ul class="duties-list">
-            <li>Разработка real-time интерфейсов для AI-агентов (цель: задержка передачи данных &lt; 200ms).</li>
-            <li>Внедрение FSD и микрофронтенд-подхода для масштабирования продукта.</li>
-            <li>Оптимизация загрузки: сокращение размера первоначального бандла на ~35%.</li>
-            <li>Pixel-perfect UI по Figma, адаптивная верстка, интеграция WebRTC-стриминга и live-дашбордов.</li>
+            <li>Разрабатывал валютную биржу с обработкой высоконагруженных транзакций и сопоставлением ордеров в
+              реальном времени.</li>
+            <li>Создание с нуля и поддержка сайтов smolmash.ru и shop.smolmash.ru (Next.js SSR + адаптивный e-commerce).
+            </li>
+            <li>Оптимизация размера бандла и улучшение Core Web Vitals (LCP, CLS, INP) до зеленой зоны (сокращение
+              загрузки на ~35%).</li>
+            <li>Фуллстек-разработка на Python (FastAPI — микросервисы, Django — админ-панель) в связке с React, Vue и
+              Next.js.</li>
           </ul>
         </div>
 
@@ -713,7 +738,8 @@
         </div>
 
         <div style="margin: 18px 0 8px;">
-          <h4 style="font-weight:800; margin-bottom:10px; color: var(--text); border-bottom: 1px dashed var(--border); padding-bottom:6px;">
+          <h4
+            style="font-weight:800; margin-bottom:10px; color: var(--text); border-bottom: 1px dashed var(--border); padding-bottom:6px;">
             Языки
           </h4>
           <div class="language-row"><span>Русский</span><span>Родной</span></div>
@@ -745,4 +771,5 @@
     <div class="note-pill">Готов к собеседованиям и тестовому заданию</div>
   </div>
 </body>
+
 </html>
